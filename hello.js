@@ -4,8 +4,10 @@ let element  = document.querySelector('p');
 element.outerHTML = element.outerHTML;
 
 function start() {
+    let gameFinishedMessage = document.getElementById('gameFinished');
+    gameFinishedMessage.style.display = 'none'
     let roundsToPlayNo = document.getElementById('roundsToPlay').value;
-    console.log(roundsToPlayNo)
+    if (roundsToPlayNo < 0 || typeof roundsToPlayNo != 'number') roundsToPlayNo = 5;
     let timeAtGameStart = new Date().getTime();
     let timeWhenClicked;
     let randomGameTileCoordinates = {
