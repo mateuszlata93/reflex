@@ -1,0 +1,37 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+div.gameTile div div {
+    color: #2a3f01;
+    border: solid;
+    border-color: cadetblue;
+    margin: 10px;
+    width: 100px;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 10px;
+}
+
+div.gameTile {
+    display: flex;
+}
+
+div.gameTile div div {
+    border-color: #075586;
+    background-color: cornflowerblue;
+}
+
+p#gameFinished {
+    display:  none;
+}
