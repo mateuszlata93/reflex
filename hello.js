@@ -4,6 +4,8 @@ let element  = document.querySelector('p');
 element.outerHTML = element.outerHTML;
 
 function start() {
+    let roundsToPlayNo = document.getElementById('roundsToPlay').value;
+    console.log(roundsToPlayNo)
     let timeAtGameStart = new Date().getTime();
     let timeWhenClicked;
     let randomGameTileCoordinates = {
@@ -21,7 +23,7 @@ function start() {
         timesToClickTile.push(timeUntilCLicked)
         printResults();
         randomGameTile.removeEventListener('click', calculateTimeBetweenClicks)
-        if (roundsPlayed == 5){
+        if (roundsPlayed == roundsToPlayNo){
             stop();
             return;
         }
